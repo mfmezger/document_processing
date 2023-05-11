@@ -1,0 +1,47 @@
+You extract text into a table from a document.
+###
+Text:
+44 Muster GmbH
+Muster GmbH Lange Str. 2 | 10245 Berlin Muster GmbH
+Lange Str. 2
+Habermann & Söhne 10245 Berlin
+Schnurlos-Straße 81 +49 (0) 30 2121356
+34131 Kassel mail@muster.de
+www.muster.de
+Rechnung
+Rechnungs-Nr.: M1675 Rechnungsdatum: 29.10.20
+Auftrags-Nr.: 01727 Lieferdatum: 30.10.20
+Komission: Bestellung Gerstner Bearbeiter: Dorothea Schäfer
+Kunden-Nr. 1068 Telefon: 030 2121359
+Bestell-Nr.: 369852 E-Mail: mail@muster.de
+Pos. Art-Nr. Bezeichnung Menge Einheit Preis/Einh. (€) Gesamt (€)
+1 B-3025-078 B-3025, Farbe Grün 1,00 Stk. 47,00 47,00
+Musterartikel
+2 B-0050-050 B-0050, Farbe Blau 2,00 Stk. 36,00 72,00
+Musterartikel ABC
+3 A-0086-007 A-0086, Antik-Look 1,00 Stk. 56,00 56,00
+Musterartikel
+3 V-13kg Versand und Verpackung 1,00 Stk. 11,99 11,99
+Summe Netto € 186,99
+19,00% USt. auf 186,99 € € 35,53
+Endsumme € 222,51
+Lieferbedingung: Postversand
+10 Tage 5% Skonto, 30 Tage ohne Abzug
+Muster GmbH : Sparkasse Berlin : Konto 10 25 25 25 : BLZ 500 600 26 : IBAN DE10 25 25 25 500 600 26 02: BIC HERAKLES02
+Sitz der Gesellschaft: Berlin, Deutschland : Geschäftsführung: Max Mustermann - Handelsregister: AG Berlin HRB 123456 - USt-IdNr. DE216398573
+Diese Rechnungsvorlage wurde erstellt von www.weclapp.com/de
+###
+Extract the following information about the reciever of the text into a table: Name of company, Streetadress, City.  
+Table:
+|Key|Value|
+|Name|44 Muster GmbH|
+|Streetadress|Muster GmbH Lange Str. 2|
+|City|10245 Berlin|
+###
+Text:
+{{text}}
+###
+Extract the following information about the reciever of the text into a table: Name of company, Streetadress, City.  
+Table:
+|Key|Value|
+|

@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "document-processing"
+version = "0.1.0"
+description = ""
+authors = ["Marc Mezger <marc.mezger@gmail.com>"]
+readme = "README.md"
+packages = [{include = "document_processing"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aleph-alpha-client = "^3.1.0"
+hydra-core = "^1.3.2"
+pytesseract = "^0.3.10"
+pdf2image = "^1.16.3"
+pdfplumber = "^0.9.0"
+loguru = "^0.7.0"
+jinja2 = "^3.1.2"
+python-dotenv = "^1.0.0"
+levenshtein = "^0.21.0"
+pandas = "^2.0.1"
+scikit-learn = "^1.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.265"
+mypy = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
