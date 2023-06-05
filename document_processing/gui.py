@@ -22,7 +22,7 @@ if uploaded_file is not None:
         f.write(uploaded_file.getbuffer())
     # Loop through each page and display its contents
     page = pdf_reader.pages[0]
-    st.text_area(label="PDF", value=page.extract_text())
+    st.text_area(label="PDF", value=page.extract_text(), height=400)
 
     # now we generate the prompt
     page = pdf_reader.pages[0]
