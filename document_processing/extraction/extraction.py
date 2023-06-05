@@ -42,7 +42,7 @@ def send_request(text: str, token: str) -> str:
     """
     client = Client(token=token)
     request = CompletionRequest(prompt=Prompt.from_text(text), maximum_tokens=256, stop_sequences=["###"])
-    response = client.complete(request, model="luminous-supreme")
+    response = client.complete(request, model="luminous-supreme-control")
 
     return response.completions[0].completion
 
