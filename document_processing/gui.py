@@ -8,6 +8,9 @@ img_path = "data/images"
 path_pdf = "data/input"
 output_path = "data/output"
 config = dotenv_values(".env")
+
+# insert the aleph alpha token
+aleph_alpha_api_key = st.text_input("Aleph Alpha Token", type="password")
 # Create a file uploader widget
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
@@ -42,7 +45,10 @@ if uploaded_file is not None:
         prompt = pre_prompt + "\n" + page + "\n" + post_prompt
 
         # send the request to the api
-        response = send_request(text=prompt, token=str(config["AA_Token"]))
+        if not aleph_alpha_api_key:
+            st.error("Please enter an Aleph Alpha Token")
+
+        response = send_request(text=prompt, token=aleph_alpha_api_key)
 
         # display the response in a text area
         st.text_area(label="Response", value=response)
