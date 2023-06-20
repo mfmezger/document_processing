@@ -44,7 +44,7 @@ def send_request(text: str, token: str) -> str:
     request = CompletionRequest(prompt=Prompt.from_text(text), maximum_tokens=256, stop_sequences=["###"])
     response = client.complete(request, model="luminous-extended-control")
 
-    return response.completions[0].completion
+    return str(response.completions[0].completion)
 
 
 def extract_information_from_table(model_output: str) -> re.Match:

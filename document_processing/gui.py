@@ -43,7 +43,7 @@ if uploaded_file is not None:
         prompt = pre_prompt + "\n" + page + "\n" + post_prompt
 
         # send the request to the api
-        response = send_request(text=prompt, token=config["AA_Token"])
+        response = send_request(text=prompt, token=str(config["AA_Token"]))
 
         # display the response in a text area
         st.text_area(label="Response", value=response)

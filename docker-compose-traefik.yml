@@ -1,5 +1,3 @@
-# create build for local docker file
-
 services:
   agent:
     build: .
