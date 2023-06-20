@@ -19,6 +19,6 @@ RUN poetry install --no-root --no-dev
 
 COPY . .
 
-ENTRYPOINT ["streamlit", "run", "document_processing/gui.py", "--server.port=8001", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "document_processing/gui.py", "--server.port=8002", "--server.address=0.0.0.0"]
 # watch the logs
 # CMD ["tail", "-f", "/dev/null"]
