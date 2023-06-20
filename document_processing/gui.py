@@ -2,8 +2,7 @@
 import PyPDF2
 import streamlit as st
 from dotenv import dotenv_values
-
-from document_processing.extraction.extraction import send_request
+from extraction.extraction import send_request
 
 img_path = "data/images"
 path_pdf = "data/input"
