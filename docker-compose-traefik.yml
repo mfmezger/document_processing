@@ -5,7 +5,7 @@ services:
 
     labels:
       traefik.enable: true
-      traefik.http.services.doc-svc.loadbalancer.server.port: 8001
+      traefik.http.services.doc-svc.loadbalancer.server.port: 8002
       traefik.http.routers.doc-rtr.rule: Host("doc.ai-adesso.de")
       traefik.http.routers.doc-rtr.service: doc-svc
       traefik.http.routers.doc-rtr.entrypoints: https
