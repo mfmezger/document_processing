@@ -20,8 +20,8 @@ if uploaded_file is not None:
     pdf_reader = PyPDF2.PdfReader(uploaded_file)
 
     # Save the uploaded file in the "data/input/" folder
-    with open("data/input/" + uploaded_file.name, "wb") as f:
-        f.write(uploaded_file.getbuffer())
+    # with open("data/input/" + uploaded_file.name, "wb") as f:
+    # f.write(uploaded_file.getbuffer())
     # Loop through each page and display its contents
     page = pdf_reader.pages[0]
     st.text_area(label="PDF", value=page.extract_text(), height=400)
